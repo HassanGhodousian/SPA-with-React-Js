@@ -19,14 +19,10 @@ const UserIndex = () => {
   }, []);
   return (
     <>
-      <div className="container  mt-5">
-        <div className="row g-3">
-          <h2>User page</h2>
-          {error && <h2 className="">{error}</h2>}
-          {loading && <div className="spinner-border" role="status"></div>}
-          {users && <CardUser users={users} />}
-        </div>
-      </div>
+      <h2>User page</h2>
+      {error && <h2 className="">{error}</h2>}
+      {loading && <div className="spinner-border" role="status"></div>}
+      {users && <CardUser users={users} />}
     </>
   );
 };

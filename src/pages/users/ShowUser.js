@@ -20,27 +20,21 @@ function showUser() {
   }, [userId]);
   return (
     <>
-      <div className="container  mt-5">
-        <div className="row g-3">
-          <h2>User page</h2>
-          {error && <h2 className="">{error}</h2>}
-          {loading && <div className="spinner-border" role="status"></div>}
-          {user && (
-            <div className="col-md-4 ">
-              <div className="card">
-                <div className="card-header fw-bold">{user.name}</div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">
-                    username : {user.username}
-                  </li>
-                  <li className="list-group-item">email : {user.email}</li>
-                  <li className="list-group-item">phone: {user.phone}</li>
-                </ul>
-              </div>
-            </div>
-          )}
+      <h2>User page</h2>
+      {error && <h2 className="">{error}</h2>}
+      {loading && <div className="spinner-border" role="status"></div>}
+      {user && (
+        <div className="col-md-4 ">
+          <div className="card">
+            <div className="card-header fw-bold">{user.name}</div>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">username : {user.username}</li>
+              <li className="list-group-item">email : {user.email}</li>
+              <li className="list-group-item">phone: {user.phone}</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

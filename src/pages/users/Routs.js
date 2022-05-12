@@ -5,10 +5,14 @@ import UserIndex from "./Users";
 function RouteUser() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<UserIndex />} />
-        <Route path="/:userId" element={<ShowUser />} />
-      </Routes>
+      <div className="container mt-5">
+        <div className="row">
+          <Routes>
+            <Route path="/" element={<UserIndex />} />
+            <Route path="/:userId" element={<ShowUser />} />
+          </Routes>
+        </div>
+      </div>
     </>
   );
 }
